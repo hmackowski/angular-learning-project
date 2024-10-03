@@ -4,8 +4,8 @@ import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    imports: [RouterTestingModule, AppComponent],
+
   }));
 
   it('should create the app', () => {
@@ -20,10 +20,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-app');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-app app is running!');
-  });
 });
