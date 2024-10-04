@@ -14,8 +14,21 @@ import { MatCardModule } from "@angular/material/card";
 })
 export class NavbarComponent {
 
+word: string ="Simple card";
+title: string = "Simple card 1";
+thirdWord: string = "Click me";
+num: number = 0;
 
   onClick(){
-    console.log("clicked");
+    this.num++;
+    console.log(this.num);
+    if (this.num == 1){
+      this.word = "Ouch! Not so hard!";
+    } else if(this.num == 2){
+      this.title = "Seriously dude?";
+    }else if(this.num == 3){
+      this.thirdWord = "Wow, this is ridiculous";
+    }
+
   }
 }

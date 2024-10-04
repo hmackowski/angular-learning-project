@@ -1,9 +1,9 @@
 <div class="container">
   <mat-card>
-    <mat-card-title>Sample card 1</mat-card-title>
-    <mat-card-content  class="container">Simple card</mat-card-content>
+    <mat-card-title>{{  title }}</mat-card-title>
+    <mat-card-content  class="container">{{ word }}</mat-card-content>
     <div class="right" >
-      <button  mat-raised-button color="accent" (click)="onClick()">CLick me</button>
+      <button  mat-raised-button color="accent" (click)="onClick()">{{ thirdWord }}</button>
     </div>
   </mat-card>
 </div>
