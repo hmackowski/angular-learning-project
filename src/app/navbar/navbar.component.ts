@@ -1,23 +1,21 @@
-import { Component } from '@angular/core';
-import { MatIconButton } from "@angular/material/button";
-import { MatIcon } from "@angular/material/icon";
-import { MatSidenav, MatSidenavContainer, MatSidenavContent } from "@angular/material/sidenav";
-import { MatToolbar } from "@angular/material/toolbar";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
-    MatSidenavContainer,
-    MatSidenav,
-    MatSidenavContent,
-    MatToolbar,
-    MatIcon,
-    MatIconButton
-  ],
+    MatButtonModule,
+    MatCardModule,
+  ],changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+
+
+  onClick(){
+    console.log("clicked");
+  }
 }
